@@ -1,10 +1,10 @@
 {
-  "name": "your-action-app",
-  "description": "This is your Action's webhook",
+  "name": "voice-programmer",
+  "description": "Voice Programmer Webhook",
   "version": "0.0.1",
   "private": true,
   "license": "Apache Version 2.0",
-  "author": "Google Inc.",
+  "author": "Matthew Chung",
   "engines": {
     "node": "~6.0"
   },
