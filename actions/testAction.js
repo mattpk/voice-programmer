@@ -1,5 +1,7 @@
 'use strict';
 
-module.exports = function (assistant) {
-	assistant.tell('Successful Test Response');
-}
+module.exports = function (model) {
+	return function (assistant) {
+		assistant.tell('Successful Test Response');
+	};
+};
