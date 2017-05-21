@@ -1,5 +1,5 @@
 # Voice Programmer
-Programming language designed to be easy-to-use with your voice.
+Programming language designed with spoken ease-of-use in mind.
 
 
 ## License

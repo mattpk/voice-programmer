@@ -1,7 +1,7 @@
 'use strict';
 
-let testAction = require('./actions/testAction');
-let declareVariable = require('./actions/declareVariable');
+let testAction = require('./testAction');
+let declareVariable = require('./declareVariable');
 
 const TEST_MESSAGE = 'test-intent';
 const DECLARE_VARIABLE = 'declare-variable';
