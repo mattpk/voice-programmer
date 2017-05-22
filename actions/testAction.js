@@ -1,15 +1,16 @@
 'use strict';
 
-let db = require('../persistence/redisConn.js').db();
+let conn = require('../persistence/redisConn');
+let db = conn.db();
 
 module.exports = function (model) {
 	return function (assistant) {
-		db.get('PING', function(err, reply) {
-			if (reply == "PONG") {
-				assistant.tell('Successful Test Response');
-			} else {
-				assistant.tell('Failed Redis Connection');
-			}
+        db.ping(function(err, reply) {
+            if (err || reply !== "PONG") {
+                assistant.tell("Error pinging redis db");
+            } else {
+                assistant.tell("Successful Test Response");
+            }
 		});
-	};
+    };
 };

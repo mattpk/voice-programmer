@@ -1,0 +1,15 @@
+{
+  // settings for linting js with JSHint
+  // my setup: JSHint Gutter for Sublime Text, CTRL + SHIFT + J
+  "esnext": false,
+  "moz": true,
+  "boss": true,
+  "node": true,
+  "validthis": true,
+  "globals": {
+    "EventEmitter": true,
+    "Promise": true
+  },
+  "esversion": 6,
+  "node": true
+}
