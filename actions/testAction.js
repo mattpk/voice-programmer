@@ -9,7 +9,7 @@ module.exports = function (model) {
             if (err || reply !== "PONG") {
                 assistant.tell("Error pinging redis db");
             } else {
-                assistant.tell("Successful Test Response");
+                assistant.ask("Successful Test Response");
             }
 		});
     };

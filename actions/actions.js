@@ -19,6 +19,7 @@ module.exports = function (model) {
                 resolve(model);
             }).then((model) =>  {
                 console.log("Persisting model");
+                console.log(model);
                 conn.persistModel(model);
             });
         });

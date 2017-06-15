@@ -3,8 +3,8 @@
 class Model {
     constructor(sessionId) {
         this.sessionId = sessionId;
-        this.functions = new Map();
-        this.variables = new Map();
+        this.functions = {};
+        this.variables = {};
         this.persistCount = 0;
     }
 }
