@@ -1,15 +1,20 @@
 'use strict';
 
 let params = require('../parameters');
+let mw = require('../model/modelHelper');
 
 module.exports = function (model) {
     return function (assistant) {
         let variable = assistant.getArgument(params.VARIABLE);
+        // fix strange Api.Ai glitch
+        if (variable.startsWith("Declare variable")) {
+            variable = variable.slice(17);
+        }
         
-        if (variable in model.variables) {
+        if (mw.hasScopedVariable(model, variable)) {
             assistant.ask("' " + variable + "' has already been declared.");
         } else {
-            model.variables[variable] = null;
+            mw.declareScopedVariable(model, variable);
             assistant.ask("Declared variable '" + variable + "'");
         }
 	};

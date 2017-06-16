@@ -6,6 +6,7 @@ class Model {
         this.functions = {};
         this.variables = {};
         this.persistCount = 0;
+        this.currentFunction = null;
     }
 }
 
